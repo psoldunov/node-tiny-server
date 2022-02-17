@@ -3,6 +3,9 @@ const http = require('http')
 const fs = require('fs')
 const path = require('path')
 
+//External Module
+const mime = require('mime-types')
+
 //Imports configuration file
 const { port, public, reqFiles } = require('./config')
 
@@ -23,16 +26,16 @@ const server = http.createServer((req, res) => {
 		if (currRes.type === 'dir') {
 			path = currRes.filePath + 'index.html'
 			res.statusCode = 200
-			res.setHeader('Content-type', 'text/html')
+			res.setHeader('Content-type', mime.lookup(path))
 		} else {
 			path = currRes.filePath
 			res.statusCode = 200
-			res.setHeader('Content-type', currRes.type)
+			res.setHeader('Content-type', mime.lookup(path))
 		}
 	} else {
 		path = `./${public}/404.html`
 		res.statusCode = 404
-		res.setHeader('Content-type', 'text/html')
+		res.setHeader('Content-type', mime.lookup(path))
 	}
 
 	fs.readFile(path, (err, data) => {

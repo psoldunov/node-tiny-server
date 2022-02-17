@@ -79,26 +79,13 @@ const serverInit = (public, reqFiles) => {
 
 			fileObj.filePath = `./${file}`
 
-			fileObj.reqUrl = file.replace(publicStr, '')
-
 			if (file.includes('.html')) {
 				fileObj.reqUrl = file.replace('.html', '').replace(publicStr, '')
-				fileObj.type = 'text/html'
-			} else if (file.includes('.css')) {
-				fileObj.type = 'text/css'
-			} else if (file.includes('.js')) {
-				fileObj.type = 'application/javascript'
-			} else if (file.includes('.ico')) {
-				fileObj.type = 'image/x-icons'
-			} else if (file.includes('.jpg') || file.includes('.jpeg')) {
-				fileObj.type = 'image/jpeg'
-			} else if (file.includes('.png')) {
-				fileObj.type = 'image/png'
-			} else if (file.includes('.svg')) {
-				fileObj.type = 'image/svg+xml'
 			} else {
-				fileObj.type = ''
+				fileObj.reqUrl = file.replace(publicStr, '')
 			}
+
+			fileObj.type = 'file'
 
 			files.push(fileObj)
 		})
