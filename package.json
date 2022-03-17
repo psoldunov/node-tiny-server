@@ -1,0 +1,30 @@
+{
+	"name": "node-tiny-server",
+	"version": "1.0.0",
+	"description": "Small static server for your HTML files",
+	"main": "server.js",
+	"scripts": {
+		"test": "node server",
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/psoldunov/node-tiny-server.git"
+	},
+	"dependencies": {
+		"mime-types": "2.1.34"
+	},
+	"keywords": [
+		"server",
+		"tiny",
+		"html",
+		"node",
+		"mime-types"
+	],
+	"author": "Philipp Soldunov",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/psoldunov/node-tiny-server/issues"
+	},
+	"homepage": "https://github.com/psoldunov/node-tiny-server#readme"
+}
