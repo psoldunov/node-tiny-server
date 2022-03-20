@@ -1,27 +1,24 @@
 {
-  "name": "tiny-server",
-  "version": "1.0.0",
-  "description": "Tiny server for node.js",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/psoldunov/node-tiny-server.git"
-  },
-  "keywords": [
-    "server",
-    "node"
-  ],
-  "author": "Philipp Soldunov",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/psoldunov/node-tiny-server/issues"
-  },
-  "homepage": "https://github.com/psoldunov/node-tiny-server#readme",
-  "dependencies": {
-    "mime-types": "^2.1.35"
-  }
+	"name": "node-tiny-server",
+	"version": "1.0.0",
+	"description": "Tiny server for node.js",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/psoldunov/node-tiny-server.git"
+	},
+	"keywords": [
+		"server",
+		"node"
+	],
+	"author": "Philipp Soldunov",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/psoldunov/node-tiny-server/issues"
+	},
+	"homepage": "https://github.com/psoldunov/node-tiny-server#readme"
 }
